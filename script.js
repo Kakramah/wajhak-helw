@@ -150,8 +150,12 @@
   const handlers = {
     s0(p, k) {
       const t = map(k, .05, .85);
-      p.el.style.setProperty('--ho', String(1 - t));
-      p.el.style.setProperty('--hb', (t * 9).toFixed(1) + 'px');
+      /* على عناصر العنوان مباشرة: تغيير المتغير على القسم يعيد حساب أنماط شجرته كلها */
+      const ho = String(1 - t), hb = (t * 9).toFixed(1) + 'px';
+      (p.state.heads ||= $$('.title,.sub,.hint,.cue', p.el)).forEach(h => {
+        h.style.setProperty('--ho', ho);
+        h.style.setProperty('--hb', hb);
+      });
       if (fog) fog.style.opacity = String(1 - map(k, .1, .95));
     },
     s3(p, k) {

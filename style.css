@@ -266,9 +266,9 @@ html.dev .plate[data-dev]::after{content:attr(data-dev);display:grid;place-items
 .explain .wrap{gap:.5rem;margin-bottom:-4rem}
 .explain .own{font-size:1.2em;font-weight:500}
 .explain .last{margin-top:1.1rem}
-.explain .last .mist{display:inline-block;transition:opacity 2.8s ease 1.2s,filter 2.8s ease 1.2s,transform 2.8s ease 1.2s,letter-spacing 2.8s ease 1.2s;color:var(--mist)}
+.explain .last .mist{display:inline-block;transition:opacity 2.8s ease 1.2s,filter 2.8s ease 1.2s,transform 2.8s ease 1.2s;color:var(--mist)}
 .explain .last .gift-word{font-family:"Aref Ruqaa",serif;font-weight:700;font-size:1.3em;color:var(--ember);transition:color 2s ease 1.5s}
-.js .explain .last.on .mist{opacity:0;filter:blur(7px);transform:translateY(-8px);letter-spacing:.2em}
+.js .explain .last.on .mist{opacity:0;filter:blur(7px);transform:translateY(-8px)}
 
 .foot{padding:0 var(--gutter) max(2.4rem,env(safe-area-inset-bottom));max-width:44rem;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.1rem;text-align:center}
 .foot hr{width:100%;border:0;height:1px;background:var(--k-mist-a22)}
@@ -282,7 +282,7 @@ html.dev .plate[data-dev]::after{content:attr(data-dev);display:grid;place-items
 .sig-name{unicode-bidi:isolate}
 .links{display:flex;justify-content:center;gap:1.1rem}
 .links a{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--k-line);border-radius:50%;color:var(--paper);transition:border-color .3s,color .3s}
-.links a:hover{border-color:var(--ember);color:var(--ember)}
+@media (hover:hover) and (pointer:fine){.links a:hover{border-color:var(--ember);color:var(--ember)}}
 
 /* ───── تقليل الحركة: تسلسل ثابت بلا لصق ───── */
 .rm .pin{height:auto!important}
@@ -343,6 +343,6 @@ html.dev .plate[data-dev]::after{content:attr(data-dev);display:grid;place-items
 .lb-nav{display:flex;align-items:center;gap:1.4rem;padding-top:.6rem}
 .lb-count{color:var(--mist);font-size:.86rem;min-width:3.4rem;text-align:center;font-variant-numeric:tabular-nums}
 .lb-btn{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--k-line);border-radius:50%;color:var(--paper);transition:border-color .3s,color .3s}
-.lb-btn:hover{border-color:var(--ember);color:var(--ember)}
+@media (hover:hover) and (pointer:fine){.lb-btn:hover{border-color:var(--ember);color:var(--ember)}}
 .lb-close{position:absolute;top:max(.7rem,env(safe-area-inset-top));left:var(--gutter)}
 .lb-open{color:var(--paper);border-bottom:1px solid var(--ember);padding:.3rem .1rem;margin-bottom:.4rem}
